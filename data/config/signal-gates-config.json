@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "entry_rule_version": "v1-five-gates",
+  "note": "信号质量五关(PLAN §4,七月军规编译)。框架已随总规划批准;标注 provisional 的具体数值在自动任务恢复前须 Cyrus 确认(P0 stop_flag)。判决窗内不得修改任何阈值(PLAN §3 防移门柱)。",
+  "gates": {
+    "g1_realized_basis": {
+      "min_history_days": 3,
+      "min_history_median_day_bp": 0.0001,
+      "provisional": true,
+      "rationale": "军规①:用历史窗实收日中位(history_median_day_bp)替代瞬时 spread/score;快照=预测,实收=已结算,是两个量。"
+    },
+    "g2_strict_sign": {
+      "min_positive_day_ratio": 0.7,
+      "provisional": false,
+      "source": "PLAN §4 已批(严格同号 ≥70%;含零口径实测虚高中位 93pp)"
+    },
+    "g3_persistence": {
+      "min_consecutive_pretriggers": 3,
+      "provisional": true,
+      "rationale": "军规③反尖峰:top3 集中度在快照聚合字段不可计算,以连续 pretrigger 张数作代理(ZHIPU/KORU/MINIMAX 型尖峰名在此关全灭)。"
+    },
+    "g4_capacity": {
+      "min_paired_capacity_usd": 1500.0,
+      "provisional": false,
+      "source": "TOP5 统一闸门已批;军规④容量先于收益率。注:capacity_usd 为 L1 配对容量代理,±10bp 深度历史不可得;HL/HL_XYZ 腿容量为采集器硬编码常数,该两腿容量证据降级看待。"
+    },
+    "g5_kill_registry": {
+      "registry_path": "data/kill-registry.json",
+      "provisional": false,
+      "source": "PLAN §6 已批"
+    }
+  },
+  "pending_cyrus": [],
+  "thresholds_confirmed": {
+    "by": "Cyrus",
+    "at": "2026-08-10",
+    "decision": "阈值维持不动(G1=3天/G3=3张),已见敏感性表(0/89-6/89-34/89)后确认",
+    "frozen": "判决窗内禁改(PLAN §3);解冻=新判决窗开始前由 Cyrus 重拍"
+  }
+}

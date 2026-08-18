@@ -1,0 +1,587 @@
+{
+  "contract": {
+    "borrow_model": "无借券腿(T2 借券被 C6 判死并冻结)",
+    "direction_rule": "short 高费率腿 / long 低费率腿(候选行 direction 字段)",
+    "entry_rule": {
+      "v0-topscore-entry": "pretrigger+complete+无blocker,score 降序取第一(已废弃,仅存量账本)",
+      "v1-five-gates": "v0 基础过滤 + 信号质量五关(G1实收/G2严格同号/G3反尖峰/G4容量/G5死因注册),按 history_median_day_bp 排序"
+    },
+    "exit_rule": "持有 72h,或原方向费差连续两次 ≤0(SPREAD_REVERSED_TWICE)",
+    "fee_model": "roundtrip_taker_bp/2 每边,taker 假设,不假设 maker 成交",
+    "funding_model": "MODELED:last_spread_day_bp 时间积分,单段封顶 8h;未与结算对账",
+    "kill_conditions": "配对容量、数据完整性或 72h 费后净收益任一不过关。",
+    "mechanism": "费差空间更大，但承担跨抵押品、预言机、链上与交易所托管风险。",
+    "risk_logic": "链上预言机、排序和清算机制与 CEX 不同，双腿之间还存在充值提现和抵押品隔离。极端行情中基差、ADL、链上拥堵或场馆故障可能同时发生。",
+    "risk_profile": {
+      "max_committed_capital_usd": 10000.0,
+      "max_gross_notional_usd": 8000.0,
+      "registered_capital_usd": 10000.0,
+      "tail_note": "双腿隔离保证金;逼空时短腿先爆是主要死法;模拟上限≠损失上限"
+    },
+    "settlement_model": "无到期(T5 到期结算,当前无数据)",
+    "sizing_rule": "每腿=min(配对容量×50%, $4,000);保证金预留=单腿 50%;总占用≥$1,000 才开",
+    "slippage_model": "0(L1 可执行价假设,未建模吃深)——显式声明的缺口",
+    "theory_basis": "CEX 与 Hyperliquid 的同一加密底层受到共同现货指数约束，但资金费公式、参与者结构和抵押品体系不同，因此可能形成可持续数个结算周期的残差。",
+    "thesis": "利用中心化交易所与链上永续不同的资金费制度捕获残差。",
+    "venues": [
+      "BINANCE",
+      "BITGET",
+      "HL"
+    ]
+  },
+  "display": {
+    "color": "violet",
+    "number": "IV",
+    "short": "CEX × DEX",
+    "title": "CEX × Hyperliquid 加密永续资金费率差"
+  },
+  "forward_paper": {
+    "equity_curve": [
+      {
+        "at": "2026-08-06T06:13:13.501203Z",
+        "cumulative_pnl_usd": 0.0,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 0.0,
+        "drawdown_pct": 0.0,
+        "gross_exposure_usd": 0.0,
+        "nav_index": 100.0,
+        "open_trade_count": 0,
+        "period_pnl_usd": 0.0,
+        "source_snapshot_id": "2026-08-06T06:13:13.501203Z"
+      },
+      {
+        "at": "2026-08-06T06:26:01.787124Z",
+        "cumulative_pnl_usd": 0.0,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 0.0,
+        "drawdown_pct": 0.0,
+        "gross_exposure_usd": 0.0,
+        "nav_index": 100.0,
+        "open_trade_count": 0,
+        "period_pnl_usd": 0.0,
+        "source_snapshot_id": "2026-08-06T06:26:01.787124Z"
+      },
+      {
+        "at": "2026-08-06T10:26:27.075705Z",
+        "cumulative_pnl_usd": -1.2,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": -0.012,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 99.988,
+        "open_trade_count": 1,
+        "period_pnl_usd": -1.2,
+        "source_snapshot_id": "2026-08-06T10:26:27.075705Z"
+      },
+      {
+        "at": "2026-08-06T14:26:47.842214Z",
+        "cumulative_pnl_usd": -2.17,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": -0.0217,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 99.9783,
+        "open_trade_count": 1,
+        "period_pnl_usd": -0.97,
+        "source_snapshot_id": "2026-08-06T14:26:47.842214Z"
+      },
+      {
+        "at": "2026-08-06T18:26:23.672404Z",
+        "cumulative_pnl_usd": -2.28,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": -0.0228,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 99.9772,
+        "open_trade_count": 1,
+        "period_pnl_usd": -0.11,
+        "source_snapshot_id": "2026-08-06T18:26:23.672404Z"
+      },
+      {
+        "at": "2026-08-06T22:33:04.290613Z",
+        "cumulative_pnl_usd": -1.78,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": -0.0178,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 99.9822,
+        "open_trade_count": 1,
+        "period_pnl_usd": 0.5,
+        "source_snapshot_id": "2026-08-06T22:33:04.290613Z"
+      },
+      {
+        "at": "2026-08-07T02:25:43.685450Z",
+        "cumulative_pnl_usd": -1.69,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": -0.0169,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 99.9831,
+        "open_trade_count": 1,
+        "period_pnl_usd": 0.09,
+        "source_snapshot_id": "2026-08-07T02:25:43.685450Z"
+      },
+      {
+        "at": "2026-08-07T06:25:54.888726Z",
+        "cumulative_pnl_usd": -1.28,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": -0.0128,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 99.9872,
+        "open_trade_count": 1,
+        "period_pnl_usd": 0.41,
+        "source_snapshot_id": "2026-08-07T06:25:54.888726Z"
+      },
+      {
+        "at": "2026-08-07T15:01:50.833315Z",
+        "cumulative_pnl_usd": -1.12,
+        "data_status": "ACCRUAL_CAPPED_GAP",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": -0.0112,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 99.9888,
+        "open_trade_count": 1,
+        "period_pnl_usd": 0.16,
+        "source_snapshot_id": "2026-08-07T15:01:50.833315Z"
+      },
+      {
+        "at": "2026-08-07T18:25:43.503631Z",
+        "cumulative_pnl_usd": -0.73,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": -0.0073,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 99.9927,
+        "open_trade_count": 1,
+        "period_pnl_usd": 0.39,
+        "source_snapshot_id": "2026-08-07T18:25:43.503631Z"
+      },
+      {
+        "at": "2026-08-07T22:27:13.733385Z",
+        "cumulative_pnl_usd": -0.34,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": -0.0034,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 99.9966,
+        "open_trade_count": 1,
+        "period_pnl_usd": 0.39,
+        "source_snapshot_id": "2026-08-07T22:27:13.733385Z"
+      },
+      {
+        "at": "2026-08-08T14:18:04.590935Z",
+        "cumulative_pnl_usd": 0.19,
+        "data_status": "ACCRUAL_CAPPED_GAP",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": 0.0,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 100.0019,
+        "open_trade_count": 1,
+        "period_pnl_usd": 0.53,
+        "source_snapshot_id": "2026-08-08T14:18:04.590935Z"
+      },
+      {
+        "at": "2026-08-08T15:29:53.177717Z",
+        "cumulative_pnl_usd": 0.09,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": -0.001,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 100.0009,
+        "open_trade_count": 1,
+        "period_pnl_usd": -0.1,
+        "source_snapshot_id": "2026-08-08T15:29:53.177717Z"
+      },
+      {
+        "at": "2026-08-08T15:33:01.129395Z",
+        "cumulative_pnl_usd": 0.09,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": -0.001,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 100.0009,
+        "open_trade_count": 1,
+        "period_pnl_usd": 0.0,
+        "source_snapshot_id": "2026-08-08T15:33:01.129395Z"
+      },
+      {
+        "at": "2026-08-08T18:27:27.563639Z",
+        "cumulative_pnl_usd": 0.16,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": -0.0003,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 100.0016,
+        "open_trade_count": 1,
+        "period_pnl_usd": 0.07,
+        "source_snapshot_id": "2026-08-08T18:27:27.563639Z"
+      },
+      {
+        "at": "2026-08-08T22:26:25.978537Z",
+        "cumulative_pnl_usd": -0.07,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": -0.0026,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 99.9993,
+        "open_trade_count": 1,
+        "period_pnl_usd": -0.23,
+        "source_snapshot_id": "2026-08-08T22:26:25.978537Z"
+      },
+      {
+        "at": "2026-08-09T02:26:49.998813Z",
+        "cumulative_pnl_usd": 0.63,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": 0.0,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 100.0063,
+        "open_trade_count": 1,
+        "period_pnl_usd": 0.7,
+        "source_snapshot_id": "2026-08-09T02:26:49.998813Z"
+      },
+      {
+        "at": "2026-08-09T06:27:19.914862Z",
+        "cumulative_pnl_usd": -0.08,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 2007.22,
+        "drawdown_pct": -0.0071,
+        "gross_exposure_usd": 1605.78,
+        "nav_index": 99.9992,
+        "open_trade_count": 1,
+        "period_pnl_usd": -0.71,
+        "source_snapshot_id": "2026-08-09T06:27:19.914862Z"
+      },
+      {
+        "at": "2026-08-09T10:26:57.001832Z",
+        "cumulative_pnl_usd": -2.64,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 3966.34,
+        "drawdown_pct": -0.032698,
+        "gross_exposure_usd": 3173.08,
+        "nav_index": 99.9736,
+        "open_trade_count": 1,
+        "period_pnl_usd": -2.56,
+        "source_snapshot_id": "2026-08-09T10:26:57.001832Z"
+      },
+      {
+        "at": "2026-08-09T14:26:13.201151Z",
+        "cumulative_pnl_usd": -4.78,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 3966.34,
+        "drawdown_pct": -0.054097,
+        "gross_exposure_usd": 3173.08,
+        "nav_index": 99.9522,
+        "open_trade_count": 1,
+        "period_pnl_usd": -2.14,
+        "source_snapshot_id": "2026-08-09T14:26:13.201151Z"
+      },
+      {
+        "at": "2026-08-09T18:26:58.920884Z",
+        "cumulative_pnl_usd": -3.74,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 3966.34,
+        "drawdown_pct": -0.043697,
+        "gross_exposure_usd": 3173.08,
+        "nav_index": 99.9626,
+        "open_trade_count": 1,
+        "period_pnl_usd": 1.04,
+        "source_snapshot_id": "2026-08-09T18:26:58.920884Z"
+      },
+      {
+        "at": "2026-08-09T22:25:43.096969Z",
+        "cumulative_pnl_usd": -4.77,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 3966.34,
+        "drawdown_pct": -0.053997,
+        "gross_exposure_usd": 3173.08,
+        "nav_index": 99.9523,
+        "open_trade_count": 1,
+        "period_pnl_usd": -1.03,
+        "source_snapshot_id": "2026-08-09T22:25:43.096969Z"
+      },
+      {
+        "at": "2026-08-10T02:31:39.172138Z",
+        "cumulative_pnl_usd": -3.42,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 3966.34,
+        "drawdown_pct": -0.040497,
+        "gross_exposure_usd": 3173.08,
+        "nav_index": 99.9658,
+        "open_trade_count": 1,
+        "period_pnl_usd": 1.35,
+        "source_snapshot_id": "2026-08-10T02:31:39.172138Z"
+      },
+      {
+        "at": "2026-08-10T06:26:47.796042Z",
+        "cumulative_pnl_usd": -3.1,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 3966.34,
+        "drawdown_pct": -0.037298,
+        "gross_exposure_usd": 3173.08,
+        "nav_index": 99.969,
+        "open_trade_count": 1,
+        "period_pnl_usd": 0.32,
+        "source_snapshot_id": "2026-08-10T06:26:47.796042Z"
+      },
+      {
+        "at": "2026-08-14T03:54:56.811640Z",
+        "cumulative_pnl_usd": -3.92,
+        "data_status": "ACCRUAL_CAPPED_GAP",
+        "deployed_capital_usd": 0.0,
+        "drawdown_pct": -0.045497,
+        "gross_exposure_usd": 0.0,
+        "nav_index": 99.9608,
+        "open_trade_count": 0,
+        "period_pnl_usd": -0.82,
+        "source_snapshot_id": "2026-08-14T03:54:56.811640Z"
+      },
+      {
+        "at": "2026-08-14T04:02:17.273114Z",
+        "cumulative_pnl_usd": -3.92,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 0.0,
+        "drawdown_pct": -0.045497,
+        "gross_exposure_usd": 0.0,
+        "nav_index": 99.9608,
+        "open_trade_count": 0,
+        "period_pnl_usd": 0.0,
+        "source_snapshot_id": "2026-08-14T04:02:17.273114Z"
+      },
+      {
+        "at": "2026-08-18T03:50:47.983772Z",
+        "cumulative_pnl_usd": -3.92,
+        "data_status": "ACCRUAL_CAPPED_GAP",
+        "deployed_capital_usd": 0.0,
+        "drawdown_pct": -0.045497,
+        "gross_exposure_usd": 0.0,
+        "nav_index": 99.9608,
+        "open_trade_count": 0,
+        "period_pnl_usd": 0.0,
+        "source_snapshot_id": "2026-08-18T03:50:47.983772Z"
+      },
+      {
+        "at": "2026-08-18T05:53:14.383671Z",
+        "cumulative_pnl_usd": -3.92,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 0.0,
+        "drawdown_pct": -0.045497,
+        "gross_exposure_usd": 0.0,
+        "nav_index": 99.9608,
+        "open_trade_count": 0,
+        "period_pnl_usd": 0.0,
+        "source_snapshot_id": "2026-08-18T05:53:14.383671Z"
+      },
+      {
+        "at": "2026-08-18T05:54:37.331048Z",
+        "cumulative_pnl_usd": -3.92,
+        "data_status": "MODELED_OK",
+        "deployed_capital_usd": 0.0,
+        "drawdown_pct": -0.045497,
+        "gross_exposure_usd": 0.0,
+        "nav_index": 99.9608,
+        "open_trade_count": 0,
+        "period_pnl_usd": 0.0,
+        "source_snapshot_id": "2026-08-18T05:54:37.331048Z"
+      }
+    ],
+    "forward_started_at_utc": "2026-08-06T06:12:57.996811Z",
+    "metrics": {
+      "basis_mark_pnl_usd": -1.08,
+      "closed_trades": 2,
+      "closed_win_rate_pct": 0.0,
+      "closed_wins": 0,
+      "cumulative_net_pnl_usd": -3.92,
+      "fees_usd": 7.16,
+      "funding_pnl_usd": 4.33,
+      "nav_index": 99.9608,
+      "open_trades": 0
+    },
+    "source_snapshot_cursor": "2026-08-18T05:54:37.331048Z",
+    "status": "LIVE_4H_CYCLE",
+    "trades": [
+      {
+        "assumptions": [
+          "signal_at≈opened_at:信号快照即开仓快照,无独立信号时点",
+          "slippage=0:按 L1 可执行价(short_bid/long_ask)直接成交假设,未建模吃深",
+          "funding=MODELED:按 last_spread_day_bp 对经过时间积分(单段封顶 8h),未与交易所结算记录对账",
+          "缺配对报价的快照不计资金费、不猜价(POSITION_DATA_STALE)"
+        ],
+        "basis_mark_pnl": -0.7768837414376151,
+        "blockers": [
+          "stale_observations=1(缺配对报价的快照数)"
+        ],
+        "borrow_cost": null,
+        "close_reason": "72H_HORIZON",
+        "closed_at": "2026-08-09T10:26:57.001832Z",
+        "committed_capital": 2007.22,
+        "data_status": "MODELED_NOT_RECONCILED",
+        "direction": "short BITGET / long HL",
+        "entry_bid_ask": {
+          "long_ask": 0.182727,
+          "note": "入场按 short_bid 卖出/long_ask 买入的 L1 可执行价",
+          "short_bid": 0.1826
+        },
+        "exit_bid_ask": {
+          "long_bid": 0.185152,
+          "note": "退出按最后观测的对侧 L1;OPEN 仓为最新标记",
+          "short_ask": 0.1852
+        },
+        "fees": {
+          "entry": 1.2,
+          "exit": 1.2,
+          "total": 2.4
+        },
+        "funding_pnl": 2.918729468181282,
+        "gross_exposure": 1605.78,
+        "long_leg": {
+          "entry_price": 0.182727,
+          "latest_exit_price": 0.185152,
+          "symbol": "JUP",
+          "venue": "HL"
+        },
+        "mode": "FORWARD_PAPER",
+        "net_pnl": -0.26,
+        "notional_per_leg": 802.89,
+        "opened_at": "2026-08-06T10:26:27.075705Z",
+        "pair_id": "JUP:BITGET|HL",
+        "reserve": 401.44,
+        "settlement_pnl": null,
+        "short_leg": {
+          "entry_price": 0.1826,
+          "latest_cover_price": 0.1852,
+          "symbol": "JUPUSDT",
+          "venue": "BITGET"
+        },
+        "signal_at": "2026-08-06T10:26:27.075705Z",
+        "slippage": 0.0,
+        "source_snapshot_ids": [
+          "2026-08-06T10:26:27.075705Z",
+          "2026-08-06T14:26:47.842214Z",
+          "2026-08-06T18:26:23.672404Z",
+          "2026-08-06T22:33:04.290613Z",
+          "2026-08-07T02:25:43.685450Z",
+          "2026-08-07T06:25:54.888726Z",
+          "2026-08-07T15:01:50.833315Z",
+          "2026-08-07T18:25:43.503631Z",
+          "2026-08-07T22:27:13.733385Z",
+          "2026-08-08T14:18:04.590935Z",
+          "2026-08-08T15:29:53.177717Z",
+          "2026-08-08T15:33:01.129395Z",
+          "2026-08-08T18:27:27.563639Z",
+          "2026-08-08T22:26:25.978537Z",
+          "2026-08-09T02:26:49.998813Z",
+          "2026-08-09T06:27:19.914862Z",
+          "2026-08-09T10:26:57.001832Z"
+        ],
+        "status": "CLOSED",
+        "strategy_id": "T4_CEX_DEX_CRYPTO_FUNDING",
+        "strategy_version": "v0-topscore-entry",
+        "trade_id": "T4_CEX_DEX_CRYPTO_FUNDING:JUP:2026-08-06T10:26:27.075705Z",
+        "underlying": "JUP"
+      },
+      {
+        "assumptions": [
+          "signal_at≈opened_at:信号快照即开仓快照,无独立信号时点",
+          "slippage=0:按 L1 可执行价(short_bid/long_ask)直接成交假设,未建模吃深",
+          "funding=MODELED:按 last_spread_day_bp 对经过时间积分(单段封顶 8h),未与交易所结算记录对账",
+          "缺配对报价的快照不计资金费、不猜价(POSITION_DATA_STALE)"
+        ],
+        "basis_mark_pnl": -0.3068741295995867,
+        "blockers": [],
+        "borrow_cost": null,
+        "close_reason": "72H_HORIZON",
+        "closed_at": "2026-08-14T03:54:56.811640Z",
+        "committed_capital": 3966.34,
+        "data_status": "MODELED_NOT_RECONCILED",
+        "direction": "short BITGET / long HL",
+        "entry_bid_ask": {
+          "long_ask": 0.136482,
+          "note": "入场按 short_bid 卖出/long_ask 买入的 L1 可执行价",
+          "short_bid": 0.1364
+        },
+        "exit_bid_ask": {
+          "long_bid": 0.135455,
+          "note": "退出按最后观测的对侧 L1;OPEN 仓为最新标记",
+          "short_ask": 0.1354
+        },
+        "fees": {
+          "entry": 2.38,
+          "exit": 2.38,
+          "total": 4.76
+        },
+        "funding_pnl": 1.4063329496142518,
+        "gross_exposure": 3173.08,
+        "long_leg": {
+          "entry_price": 0.136482,
+          "latest_exit_price": 0.135455,
+          "symbol": "FET",
+          "venue": "HL"
+        },
+        "mode": "FORWARD_PAPER",
+        "net_pnl": -3.66,
+        "notional_per_leg": 1586.54,
+        "opened_at": "2026-08-09T10:26:57.001832Z",
+        "pair_id": "FET:BITGET|HL",
+        "reserve": 793.27,
+        "settlement_pnl": null,
+        "short_leg": {
+          "entry_price": 0.1364,
+          "latest_cover_price": 0.1354,
+          "symbol": "FETUSDT",
+          "venue": "BITGET"
+        },
+        "signal_at": "2026-08-09T10:26:57.001832Z",
+        "slippage": 0.0,
+        "source_snapshot_ids": [
+          "2026-08-09T10:26:57.001832Z",
+          "2026-08-09T14:26:13.201151Z",
+          "2026-08-09T18:26:58.920884Z",
+          "2026-08-09T22:25:43.096969Z",
+          "2026-08-10T02:31:39.172138Z",
+          "2026-08-10T06:26:47.796042Z",
+          "2026-08-14T03:54:56.811640Z"
+        ],
+        "status": "CLOSED",
+        "strategy_id": "T4_CEX_DEX_CRYPTO_FUNDING",
+        "strategy_version": "v0-topscore-entry",
+        "trade_id": "T4_CEX_DEX_CRYPTO_FUNDING:FET:2026-08-09T10:26:57.001832Z",
+        "underlying": "FET"
+      }
+    ]
+  },
+  "generated_at_utc": "2026-08-18T05:54:49.633895Z",
+  "historical": {
+    "blockers": [
+      "JUP:BITGET|HL 被 pinned 连续覆盖 ~92h,可做端到端样例;其余 pair churn 大",
+      "HL 腿容量为硬编码常数;资金费 1h 周期只能模型化"
+    ],
+    "data_quality": "见 blockers;『无有效历史曲线』本身是有效结论",
+    "data_window": null,
+    "equity_curve": [],
+    "metrics": null,
+    "signal_replay_note": "dashboard.history(HISTORICAL_REPLAY_NOT_SCORE)是候选信号回放,不是历史收益,不得累加成曲线",
+    "source_receipts": [],
+    "status": "HISTORICAL_DATA_INCOMPLETE",
+    "trades": []
+  },
+  "real_money": {
+    "authorized": false,
+    "capital_usd": 0,
+    "equity_curve": null,
+    "status": "NOT_AUTHORIZED",
+    "trades": [],
+    "unlock_requires": [
+      "「零杠杆红线 vs 双 perp ≤2×」口径悬案 Cyrus 拍板",
+      "SNDK 杠杆仓五数收口",
+      "该策略通过晋升标尺(min(20笔,6周)判决窗)",
+      "Cyrus 对具体金额的书面授权"
+    ]
+  },
+  "reconciliation": {
+    "replay_vs_stored": "PASSED"
+  },
+  "schema_version": 1,
+  "strategy_id": "T4_CEX_DEX_CRYPTO_FUNDING"
+}

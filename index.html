@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ML-ARBI｜套利策略平台</title>
+<meta name="description" content="策略产品化的套利研究与验证平台:采集→信号闸门→前向影子→回测→受锁真钱层,全账本可追溯。公开数据·影子模拟·真钱未授权。" />
+<link rel="stylesheet" href="./styles.css" />
+<style>
+  /* 静态站附加(与 React 版对齐) */
+  .sidebar nav a { width: 100%; padding: 12px 12px; border-radius: 7px; color: #9ba7b8; display: flex; align-items: center; gap: 12px; text-align: left; font-size: 12px; text-decoration: none; transition: .15s ease; }
+  .sidebar nav a span { color: #5f6d80; font-size: 9px; font-variant-numeric: tabular-nums; }
+  .sidebar nav a:hover { background: rgba(255,255,255,.05); color: white; }
+  .sidebar nav a.active { background: var(--nav-soft); color: white; box-shadow: inset 3px 0 var(--blue); }
+  .sidebar nav a.active span { color: #8eb0ff; }
+  .fund-card a { text-decoration: none; color: inherit; }
+  a.card-link { text-decoration: none; color: inherit; display: block; height: 100%; }
+  .loading { padding: 40px; color: var(--muted); font-size: 12px; }
+  .site-foot { font-size: 10px; color: var(--muted-2); padding: 0 32px 24px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; background: var(--panel-soft); padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div id="app" class="app-shell"><div class="loading">加载账本…</div></div>
+<script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1476 @@
+{
+  "capital_policy": {
+    "capacity_participation": 0.5,
+    "description": "每腿使用同步可见容量的 50%，单腿最多 $4,000；另留 50% 单腿名义额作为保证金与退出缓冲。",
+    "max_committed_capital_usd": 10000.0,
+    "max_per_leg_usd": 4000.0,
+    "min_committed_capital_usd": 1000.0,
+    "registered_portfolio_capital_usd": 50000.0,
+    "reserve_per_leg_ratio": 0.5
+  },
+  "closed_positions": [
+    {
+      "candidate_key": "DELL:BITGET>HL_XYZ",
+      "close_reason": "SPREAD_REVERSED_TWICE",
+      "closed_at_utc": "2026-08-06T14:26:47.842214Z",
+      "current_long_exit_price": 451.3009,
+      "current_short_cover_price": 451.32,
+      "data_status": "MODELED_NOT_RECONCILED",
+      "direction": "short BITGET / long HL_XYZ",
+      "entry_fee_usd": 1.16,
+      "entry_long_price": 459.4042,
+      "entry_short_price": 459.6,
+      "entry_spread_day_bp": 29.349384,
+      "exit_fee_usd": 1.16,
+      "id": "T1_EQUITY_FUNDING:DELL:2026-08-06T06:13:13.501203Z",
+      "last_observed_at_utc": "2026-08-06T14:26:47.842214Z",
+      "last_spread_day_bp": -3.96,
+      "long_symbol": "xyz:DELL",
+      "long_venue": "HL_XYZ",
+      "mark_to_market_usd": 0.633216124765795,
+      "modeled_funding_usd": 0.8005387093892113,
+      "negative_spread_streak": 2,
+      "opened_at_utc": "2026-08-06T06:13:13.501203Z",
+      "pair_id": "DELL:BITGET|HL_XYZ",
+      "pnl_usd": -0.89,
+      "projected_net_72h_bp_at_entry": 54.248152,
+      "short_symbol": "DELLUSDT",
+      "short_venue": "BITGET",
+      "sizing": {
+        "binding_constraint": "visible paired capacity",
+        "committed_capital_usd": 4199.6,
+        "eligible": true,
+        "expected_72h_pnl_usd": 9.11,
+        "notional_per_leg_usd": 1679.84,
+        "paired_capacity_usd": 3359.68,
+        "participation_rate": 0.5,
+        "reserve_usd": 839.92
+      },
+      "stale_observations": 1,
+      "status": "CLOSED",
+      "track": "T1_EQUITY_FUNDING",
+      "underlying": "DELL"
+    },
+    {
+      "candidate_key": "ZHIPU:HL_XYZ>BITGET",
+      "close_reason": "SPREAD_REVERSED_TWICE",
+      "closed_at_utc": "2026-08-06T22:33:04.290613Z",
+      "current_long_exit_price": 134.03,
+      "current_short_cover_price": 133.916,
+      "data_status": "MODELED_NOT_RECONCILED",
+      "direction": "short HL_XYZ / long BITGET",
+      "entry_fee_usd": 2.03,
+      "entry_long_price": 137.42,
+      "entry_short_price": 136.963,
+      "entry_spread_day_bp": 85.05252,
+      "exit_fee_usd": 2.03,
+      "id": "T1_EQUITY_FUNDING:ZHIPU:2026-08-06T14:26:47.842214Z",
+      "last_observed_at_utc": "2026-08-06T22:33:04.290613Z",
+      "last_spread_day_bp": -10.847112,
+      "long_symbol": "ZHIPUUSDT",
+      "long_venue": "BITGET",
+      "mark_to_market_usd": -7.132613463958748,
+      "modeled_funding_usd": 2.0130079540396046,
+      "negative_spread_streak": 2,
+      "opened_at_utc": "2026-08-06T14:26:47.842214Z",
+      "pair_id": "ZHIPU:BITGET|HL_XYZ",
+      "pnl_usd": -9.18,
+      "projected_net_72h_bp_at_entry": 188.101848,
+      "short_symbol": "xyz:ZHIPU",
+      "short_venue": "HL_XYZ",
+      "sizing": {
+        "binding_constraint": "visible paired capacity",
+        "committed_capital_usd": 7362.27,
+        "eligible": true,
+        "expected_72h_pnl_usd": 55.39,
+        "notional_per_leg_usd": 2944.91,
+        "paired_capacity_usd": 5889.82,
+        "participation_rate": 0.5,
+        "reserve_usd": 1472.45
+      },
+      "stale_observations": 0,
+      "status": "CLOSED",
+      "track": "T1_EQUITY_FUNDING",
+      "underlying": "ZHIPU"
+    },
+    {
+      "candidate_key": "KORU:BITGET>HL_XYZ",
+      "close_reason": "SPREAD_REVERSED_TWICE",
+      "closed_at_utc": "2026-08-07T06:25:54.888726Z",
+      "current_long_exit_price": 16.60995,
+      "current_short_cover_price": 16.664,
+      "data_status": "MODELED_NOT_RECONCILED",
+      "direction": "short BITGET / long HL_XYZ",
+      "entry_fee_usd": 0.67,
+      "entry_long_price": 17.28376,
+      "entry_short_price": 17.293,
+      "entry_spread_day_bp": 23.64,
+      "exit_fee_usd": 0.67,
+      "id": "T1_EQUITY_FUNDING:KORU:2026-08-06T22:33:04.290613Z",
+      "last_observed_at_utc": "2026-08-07T06:25:54.888726Z",
+      "last_spread_day_bp": -1.5,
+      "long_symbol": "xyz:KORU",
+      "long_venue": "HL_XYZ",
+      "mark_to_market_usd": -2.529537700834574,
+      "modeled_funding_usd": 0.345649839041826,
+      "negative_spread_streak": 2,
+      "opened_at_utc": "2026-08-06T22:33:04.290613Z",
+      "pair_id": "KORU:BITGET|HL_XYZ",
+      "pnl_usd": -3.52,
+      "projected_net_72h_bp_at_entry": 37.12,
+      "short_symbol": "KORUUSDT",
+      "short_venue": "BITGET",
+      "sizing": {
+        "binding_constraint": "visible paired capacity",
+        "committed_capital_usd": 2421.03,
+        "eligible": true,
+        "expected_72h_pnl_usd": 3.59,
+        "notional_per_leg_usd": 968.41,
+        "paired_capacity_usd": 1936.82,
+        "participation_rate": 0.5,
+        "reserve_usd": 484.2
+      },
+      "stale_observations": 0,
+      "status": "CLOSED",
+      "track": "T1_EQUITY_FUNDING",
+      "underlying": "KORU"
+    },
+    {
+      "candidate_key": "MINIMAX:HL_XYZ>BINANCE",
+      "close_reason": "SPREAD_REVERSED_TWICE",
+      "closed_at_utc": "2026-08-09T06:27:19.914862Z",
+      "current_long_exit_price": 43.02,
+      "current_short_cover_price": 43.0997,
+      "data_status": "MODELED_NOT_RECONCILED",
+      "direction": "short HL_XYZ / long BINANCE",
+      "entry_fee_usd": 1.26,
+      "entry_long_price": 42.81,
+      "entry_short_price": 42.6754,
+      "entry_spread_day_bp": 30.91134,
+      "exit_fee_usd": 1.26,
+      "id": "T1_EQUITY_FUNDING:MINIMAX:2026-08-07T06:25:54.888726Z",
+      "last_observed_at_utc": "2026-08-09T06:27:19.914862Z",
+      "last_spread_day_bp": -19.523616,
+      "long_symbol": "MINIMAXUSDT",
+      "long_venue": "BINANCE",
+      "mark_to_market_usd": -10.794858346596886,
+      "modeled_funding_usd": 4.4920550928567256,
+      "negative_spread_streak": 2,
+      "opened_at_utc": "2026-08-07T06:25:54.888726Z",
+      "pair_id": "MINIMAX:BINANCE|HL_XYZ",
+      "pnl_usd": -8.82,
+      "projected_net_72h_bp_at_entry": 29.492768,
+      "short_symbol": "xyz:MINIMAX",
+      "short_venue": "HL_XYZ",
+      "sizing": {
+        "binding_constraint": "visible paired capacity",
+        "committed_capital_usd": 5357.68,
+        "eligible": true,
+        "expected_72h_pnl_usd": 6.32,
+        "notional_per_leg_usd": 2143.07,
+        "paired_capacity_usd": 4286.14,
+        "participation_rate": 0.5,
+        "reserve_usd": 1071.54
+      },
+      "stale_observations": 2,
+      "status": "CLOSED",
+      "track": "T1_EQUITY_FUNDING",
+      "underlying": "MINIMAX"
+    },
+    {
+      "candidate_key": "JUP:BITGET>HL",
+      "close_reason": "72H_HORIZON",
+      "closed_at_utc": "2026-08-09T10:26:57.001832Z",
+      "current_long_exit_price": 0.185152,
+      "current_short_cover_price": 0.1852,
+      "data_status": "MODELED_NOT_RECONCILED",
+      "direction": "short BITGET / long HL",
+      "entry_fee_usd": 1.2,
+      "entry_long_price": 0.182727,
+      "entry_short_price": 0.1826,
+      "entry_spread_day_bp": 25.67916,
+      "exit_fee_usd": 1.2,
+      "id": "T4_CEX_DEX_CRYPTO_FUNDING:JUP:2026-08-06T10:26:27.075705Z",
+      "last_observed_at_utc": "2026-08-09T10:26:57.001832Z",
+      "last_spread_day_bp": -0.0,
+      "long_symbol": "JUP",
+      "long_venue": "HL",
+      "mark_to_market_usd": -0.7768837414376151,
+      "modeled_funding_usd": 2.918729468181282,
+      "negative_spread_streak": 1,
+      "opened_at_utc": "2026-08-06T10:26:27.075705Z",
+      "pair_id": "JUP:BITGET|HL",
+      "pnl_usd": -0.26,
+      "projected_net_72h_bp_at_entry": 20.087221,
+      "short_symbol": "JUPUSDT",
+      "short_venue": "BITGET",
+      "sizing": {
+        "binding_constraint": "visible paired capacity",
+        "committed_capital_usd": 2007.22,
+        "eligible": true,
+        "expected_72h_pnl_usd": 1.61,
+        "notional_per_leg_usd": 802.89,
+        "paired_capacity_usd": 1605.78,
+        "participation_rate": 0.5,
+        "reserve_usd": 401.44
+      },
+      "stale_observations": 1,
+      "status": "CLOSED",
+      "track": "T4_CEX_DEX_CRYPTO_FUNDING",
+      "underlying": "JUP"
+    },
+    {
+      "candidate_key": "DKNG:BITGET>HL_XYZ",
+      "close_reason": "72H_HORIZON",
+      "closed_at_utc": "2026-08-14T03:54:56.811640Z",
+      "current_long_exit_price": 25.2847,
+      "current_short_cover_price": 25.407,
+      "data_status": "MODELED_NOT_RECONCILED",
+      "direction": "short BITGET / long HL_XYZ",
+      "entry_fee_usd": 2.07,
+      "entry_long_price": 24.4218,
+      "entry_short_price": 24.394,
+      "entry_spread_day_bp": 51.64392,
+      "exit_fee_usd": 2.07,
+      "id": "T1_EQUITY_FUNDING:DKNG:2026-08-09T06:27:19.914862Z",
+      "last_observed_at_utc": "2026-08-14T03:54:56.811640Z",
+      "last_spread_day_bp": 6.285768,
+      "long_symbol": "xyz:DKNG",
+      "long_venue": "HL_XYZ",
+      "mark_to_market_usd": -18.580256936380735,
+      "modeled_funding_usd": 6.1800370857613895,
+      "negative_spread_streak": 0,
+      "opened_at_utc": "2026-08-09T06:27:19.914862Z",
+      "pair_id": "DKNG:BITGET|HL_XYZ",
+      "pnl_usd": -16.54,
+      "projected_net_72h_bp_at_entry": 109.748488,
+      "short_symbol": "DKNGUSDT",
+      "short_venue": "BITGET",
+      "sizing": {
+        "binding_constraint": "visible paired capacity",
+        "committed_capital_usd": 7500.0,
+        "eligible": true,
+        "expected_72h_pnl_usd": 32.92,
+        "notional_per_leg_usd": 3000.0,
+        "paired_capacity_usd": 6000.0,
+        "participation_rate": 0.5,
+        "reserve_usd": 1500.0
+      },
+      "stale_observations": 0,
+      "status": "CLOSED",
+      "track": "T1_EQUITY_FUNDING",
+      "underlying": "DKNG"
+    },
+    {
+      "candidate_key": "FET:BITGET>HL",
+      "close_reason": "72H_HORIZON",
+      "closed_at_utc": "2026-08-14T03:54:56.811640Z",
+      "current_long_exit_price": 0.135455,
+      "current_short_cover_price": 0.1354,
+      "data_status": "MODELED_NOT_RECONCILED",
+      "direction": "short BITGET / long HL",
+      "entry_fee_usd": 2.38,
+      "entry_long_price": 0.136482,
+      "entry_short_price": 0.1364,
+      "entry_spread_day_bp": 19.933896,
+      "exit_fee_usd": 2.38,
+      "id": "T4_CEX_DEX_CRYPTO_FUNDING:FET:2026-08-09T10:26:57.001832Z",
+      "last_observed_at_utc": "2026-08-14T03:54:56.811640Z",
+      "last_spread_day_bp": -0.0,
+      "long_symbol": "FET",
+      "long_venue": "HL",
+      "mark_to_market_usd": -0.3068741295995867,
+      "modeled_funding_usd": 1.4063329496142518,
+      "negative_spread_streak": 2,
+      "opened_at_utc": "2026-08-09T10:26:57.001832Z",
+      "pair_id": "FET:BITGET|HL",
+      "pnl_usd": -3.66,
+      "projected_net_72h_bp_at_entry": 3.79357,
+      "short_symbol": "FETUSDT",
+      "short_venue": "BITGET",
+      "sizing": {
+        "binding_constraint": "visible paired capacity",
+        "committed_capital_usd": 3966.34,
+        "eligible": true,
+        "expected_72h_pnl_usd": 0.6,
+        "notional_per_leg_usd": 1586.54,
+        "paired_capacity_usd": 3173.07,
+        "participation_rate": 0.5,
+        "reserve_usd": 793.27
+      },
+      "stale_observations": 0,
+      "status": "CLOSED",
+      "track": "T4_CEX_DEX_CRYPTO_FUNDING",
+      "underlying": "FET"
+    },
+    {
+      "candidate_key": "DEXE:BITGET>BINANCE",
+      "close_reason": "72H_HORIZON",
+      "closed_at_utc": "2026-08-14T03:54:56.811640Z",
+      "current_long_exit_price": 1.999,
+      "current_short_cover_price": 2.0,
+      "data_status": "MODELED_NOT_RECONCILED",
+      "direction": "short BITGET / long BINANCE",
+      "entry_fee_usd": 1.21,
+      "entry_long_price": 2.172,
+      "entry_short_price": 2.172,
+      "entry_spread_day_bp": 33.1698,
+      "exit_fee_usd": 1.21,
+      "id": "T3_CEX_CEX_CRYPTO_FUNDING:DEXE:2026-08-09T14:26:13.201151Z",
+      "last_observed_at_utc": "2026-08-14T03:54:56.811640Z",
+      "last_spread_day_bp": -0.9792,
+      "long_symbol": "DEXEUSDT",
+      "long_venue": "BINANCE",
+      "mark_to_market_usd": -0.5062983425413705,
+      "modeled_funding_usd": 2.206729454851497,
+      "negative_spread_streak": 1,
+      "opened_at_utc": "2026-08-09T14:26:13.201151Z",
+      "pair_id": "DEXE:BINANCE|BITGET",
+      "pnl_usd": -0.72,
+      "projected_net_72h_bp_at_entry": 57.5094,
+      "short_symbol": "DEXEUSDT",
+      "short_venue": "BITGET",
+      "sizing": {
+        "binding_constraint": "visible paired capacity",
+        "committed_capital_usd": 2749.21,
+        "eligible": true,
+        "expected_72h_pnl_usd": 6.32,
+        "notional_per_leg_usd": 1099.68,
+        "paired_capacity_usd": 2199.37,
+        "participation_rate": 0.5,
+        "reserve_usd": 549.84
+      },
+      "stale_observations": 1,
+      "status": "CLOSED",
+      "track": "T3_CEX_CEX_CRYPTO_FUNDING",
+      "underlying": "DEXE"
+    }
+  ],
+  "events": [
+    {
+      "at": "2026-08-18T05:54:37.331048Z",
+      "detail": "v0 规则会选中该候选;v1 未过:G1_realized_basis。阈值与逐关判定见 signal-gates-config.json。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "KORU 信号五关拒绝",
+      "type": "GATE_REJECTED"
+    },
+    {
+      "at": "2026-08-18T05:53:14.383671Z",
+      "detail": "v0 规则会选中该候选;v1 未过:G1_realized_basis、G3_persistence。阈值与逐关判定见 signal-gates-config.json。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "CXMT 信号五关拒绝",
+      "type": "GATE_REJECTED"
+    },
+    {
+      "at": "2026-08-18T03:50:47.983772Z",
+      "detail": "v0 规则会选中该候选;v1 未过:G1_realized_basis、G3_persistence。阈值与逐关判定见 signal-gates-config.json。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "KORU 信号五关拒绝",
+      "type": "GATE_REJECTED"
+    },
+    {
+      "at": "2026-08-14T04:02:17.273114Z",
+      "detail": "v0 规则会选中该候选;v1 未过:G3_persistence。阈值与逐关判定见 signal-gates-config.json。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "BOT 信号五关拒绝",
+      "type": "GATE_REJECTED"
+    },
+    {
+      "at": "2026-08-14T03:54:56.811640Z",
+      "detail": "v0 规则会选中该候选;v1 未过:G1_realized_basis、G3_persistence。阈值与逐关判定见 signal-gates-config.json。",
+      "proposal": "T4_CEX_DEX_CRYPTO_FUNDING",
+      "title": "MOVE 信号五关拒绝",
+      "type": "GATE_REJECTED"
+    },
+    {
+      "at": "2026-08-14T03:54:56.811640Z",
+      "detail": "v0 规则会选中该候选;v1 未过:G3_persistence。阈值与逐关判定见 signal-gates-config.json。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "BOT 信号五关拒绝",
+      "type": "GATE_REJECTED"
+    },
+    {
+      "at": "2026-08-14T03:54:56.811640Z",
+      "detail": "模型盈亏 $-0.72；资金费仍待结算记录对账。",
+      "proposal": "T3_CEX_CEX_CRYPTO_FUNDING",
+      "title": "DEXE 模拟仓退出",
+      "type": "SIM_POSITION_CLOSED"
+    },
+    {
+      "at": "2026-08-14T03:54:56.811640Z",
+      "detail": "模型盈亏 $-3.66；资金费仍待结算记录对账。",
+      "proposal": "T4_CEX_DEX_CRYPTO_FUNDING",
+      "title": "FET 模拟仓退出",
+      "type": "SIM_POSITION_CLOSED"
+    },
+    {
+      "at": "2026-08-14T03:54:56.811640Z",
+      "detail": "模型盈亏 $-16.54；资金费仍待结算记录对账。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "DKNG 模拟仓退出",
+      "type": "SIM_POSITION_CLOSED"
+    },
+    {
+      "at": "2026-08-10T06:26:47.796042Z",
+      "detail": "不计资金费、不猜退出价格，等待下一张有效快照。",
+      "proposal": "T3_CEX_CEX_CRYPTO_FUNDING",
+      "title": "DEXE 本轮缺少配对报价",
+      "type": "POSITION_DATA_STALE"
+    },
+    {
+      "at": "2026-08-09T14:26:13.201151Z",
+      "detail": "每腿 $1,099.68，总模拟资本 $2,749.21；只计影子账本。",
+      "proposal": "T3_CEX_CEX_CRYPTO_FUNDING",
+      "title": "DEXE 模拟双腿入场",
+      "type": "SIM_POSITION_OPENED"
+    },
+    {
+      "at": "2026-08-09T10:26:57.001832Z",
+      "detail": "每腿 $1,586.54，总模拟资本 $3,966.34；只计影子账本。",
+      "proposal": "T4_CEX_DEX_CRYPTO_FUNDING",
+      "title": "FET 模拟双腿入场",
+      "type": "SIM_POSITION_OPENED"
+    },
+    {
+      "at": "2026-08-09T10:26:57.001832Z",
+      "detail": "模型盈亏 $-0.26；资金费仍待结算记录对账。",
+      "proposal": "T4_CEX_DEX_CRYPTO_FUNDING",
+      "title": "JUP 模拟仓退出",
+      "type": "SIM_POSITION_CLOSED"
+    },
+    {
+      "at": "2026-08-09T06:27:19.914862Z",
+      "detail": "每腿 $3,000.00，总模拟资本 $7,500.00；只计影子账本。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "DKNG 模拟双腿入场",
+      "type": "SIM_POSITION_OPENED"
+    },
+    {
+      "at": "2026-08-09T06:27:19.914862Z",
+      "detail": "模型盈亏 $-8.82；资金费仍待结算记录对账。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "MINIMAX 模拟仓退出",
+      "type": "SIM_POSITION_CLOSED"
+    },
+    {
+      "at": "2026-08-08T18:27:27.563639Z",
+      "detail": "不计资金费、不猜退出价格，等待下一张有效快照。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "MINIMAX 本轮缺少配对报价",
+      "type": "POSITION_DATA_STALE"
+    },
+    {
+      "at": "2026-08-08T15:33:01.129395Z",
+      "detail": "不计资金费、不猜退出价格，等待下一张有效快照。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "MINIMAX 本轮缺少配对报价",
+      "type": "POSITION_DATA_STALE"
+    },
+    {
+      "at": "2026-08-08T15:33:01.129395Z",
+      "detail": "不计资金费、不猜退出价格，等待下一张有效快照。",
+      "proposal": "T4_CEX_DEX_CRYPTO_FUNDING",
+      "title": "JUP 本轮缺少配对报价",
+      "type": "POSITION_DATA_STALE"
+    },
+    {
+      "at": "2026-08-07T06:25:54.888726Z",
+      "detail": "每腿 $2,143.07，总模拟资本 $5,357.68；只计影子账本。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "MINIMAX 模拟双腿入场",
+      "type": "SIM_POSITION_OPENED"
+    },
+    {
+      "at": "2026-08-07T06:25:54.888726Z",
+      "detail": "模型盈亏 $-3.52；资金费仍待结算记录对账。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "KORU 模拟仓退出",
+      "type": "SIM_POSITION_CLOSED"
+    },
+    {
+      "at": "2026-08-06T22:33:04.290613Z",
+      "detail": "每腿 $968.41，总模拟资本 $2,421.03；只计影子账本。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "KORU 模拟双腿入场",
+      "type": "SIM_POSITION_OPENED"
+    },
+    {
+      "at": "2026-08-06T22:33:04.290613Z",
+      "detail": "模型盈亏 $-9.18；资金费仍待结算记录对账。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "ZHIPU 模拟仓退出",
+      "type": "SIM_POSITION_CLOSED"
+    },
+    {
+      "at": "2026-08-06T14:26:47.842214Z",
+      "detail": "每腿 $2,944.91，总模拟资本 $7,362.27；只计影子账本。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "ZHIPU 模拟双腿入场",
+      "type": "SIM_POSITION_OPENED"
+    },
+    {
+      "at": "2026-08-06T14:26:47.842214Z",
+      "detail": "模型盈亏 $-0.89；资金费仍待结算记录对账。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "DELL 模拟仓退出",
+      "type": "SIM_POSITION_CLOSED"
+    },
+    {
+      "at": "2026-08-06T10:26:27.075705Z",
+      "detail": "每腿 $802.89，总模拟资本 $2,007.22；只计影子账本。",
+      "proposal": "T4_CEX_DEX_CRYPTO_FUNDING",
+      "title": "JUP 模拟双腿入场",
+      "type": "SIM_POSITION_OPENED"
+    },
+    {
+      "at": "2026-08-06T06:26:01.787124Z",
+      "detail": "不计资金费、不猜退出价格，等待下一张有效快照。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "DELL 本轮缺少配对报价",
+      "type": "POSITION_DATA_STALE"
+    },
+    {
+      "at": "2026-08-06T06:13:13.501203Z",
+      "detail": "每腿 $1,679.84，总模拟资本 $4,199.60；只计影子账本。",
+      "proposal": "T1_EQUITY_FUNDING",
+      "title": "DELL 模拟双腿入场",
+      "type": "SIM_POSITION_OPENED"
+    },
+    {
+      "at": "2026-08-06T06:12:57.996811Z",
+      "detail": "历史快照仅进入回放区；正式成绩从下一张新快照开始。",
+      "proposal": null,
+      "title": "ML-ARBI 前向影子账本启动",
+      "type": "SYSTEM_STARTED"
+    }
+  ],
+  "meta": {
+    "forward_started_at_utc": "2026-08-06T06:12:57.996811Z",
+    "historical_mode": "REPLAY_ONLY",
+    "latest_market_snapshot_utc": "2026-08-18T05:54:37.331048Z",
+    "official_mode": "FORWARD_SHADOW",
+    "refreshed_at_utc": "2026-08-18T05:54:49.573107Z",
+    "semantically_complete_snapshot_count": 23,
+    "source_snapshot_count": 46,
+    "source_window_start_utc": "2026-08-03T08:36:11.063024Z",
+    "subtitle": "资金领导 · 套利系统",
+    "title": "ML-ARBI",
+    "trade_authorized": false
+  },
+  "pnl_timeline": [
+    {
+      "at": "2026-08-06T06:12:57.996811Z",
+      "deployed_usd": 0.0,
+      "pnl_usd": 0.0
+    },
+    {
+      "at": "2026-08-06T06:13:13.501203Z",
+      "deployed_usd": 4199.6,
+      "pnl_usd": -1.16
+    },
+    {
+      "at": "2026-08-06T06:26:01.787124Z",
+      "deployed_usd": 4199.6,
+      "pnl_usd": -1.16
+    },
+    {
+      "at": "2026-08-06T10:26:27.075705Z",
+      "deployed_usd": 6206.82,
+      "pnl_usd": -4.22
+    },
+    {
+      "at": "2026-08-06T14:26:47.842214Z",
+      "deployed_usd": 9369.49,
+      "pnl_usd": -5.09
+    },
+    {
+      "at": "2026-08-06T18:26:23.672404Z",
+      "deployed_usd": 9369.49,
+      "pnl_usd": -10.45
+    },
+    {
+      "at": "2026-08-06T22:33:04.290613Z",
+      "deployed_usd": 4428.25,
+      "pnl_usd": -12.52
+    },
+    {
+      "at": "2026-08-07T02:25:43.685450Z",
+      "deployed_usd": 4428.25,
+      "pnl_usd": -16.46
+    },
+    {
+      "at": "2026-08-07T06:25:54.888726Z",
+      "deployed_usd": 7364.9,
+      "pnl_usd": -16.13
+    },
+    {
+      "at": "2026-08-07T15:01:50.833315Z",
+      "deployed_usd": 7364.9,
+      "pnl_usd": -21.68
+    },
+    {
+      "at": "2026-08-07T18:25:43.503631Z",
+      "deployed_usd": 7364.9,
+      "pnl_usd": -22.0
+    },
+    {
+      "at": "2026-08-07T22:27:13.733385Z",
+      "deployed_usd": 7364.9,
+      "pnl_usd": -15.02
+    },
+    {
+      "at": "2026-08-08T14:18:04.590935Z",
+      "deployed_usd": 7364.9,
+      "pnl_usd": -18.8
+    },
+    {
+      "at": "2026-08-08T15:29:53.177717Z",
+      "deployed_usd": 7364.9,
+      "pnl_usd": -20.55
+    },
+    {
+      "at": "2026-08-08T15:33:01.129395Z",
+      "deployed_usd": 7364.9,
+      "pnl_usd": -20.55
+    },
+    {
+      "at": "2026-08-08T18:27:27.563639Z",
+      "deployed_usd": 7364.9,
+      "pnl_usd": -20.48
+    },
+    {
+      "at": "2026-08-08T22:26:25.978537Z",
+      "deployed_usd": 7364.9,
+      "pnl_usd": -22.55
+    },
+    {
+      "at": "2026-08-09T02:26:49.998813Z",
+      "deployed_usd": 7364.9,
+      "pnl_usd": -17.26
+    },
+    {
+      "at": "2026-08-09T06:27:19.914862Z",
+      "deployed_usd": 9507.22,
+      "pnl_usd": -24.56
+    },
+    {
+      "at": "2026-08-09T10:26:57.001832Z",
+      "deployed_usd": 11466.34,
+      "pnl_usd": -58.51
+    },
+    {
+      "at": "2026-08-09T14:26:13.201151Z",
+      "deployed_usd": 14215.55,
+      "pnl_usd": -60.57
+    },
+    {
+      "at": "2026-08-09T18:26:58.920884Z",
+      "deployed_usd": 14215.55,
+      "pnl_usd": -48.73
+    },
+    {
+      "at": "2026-08-09T22:25:43.096969Z",
+      "deployed_usd": 14215.55,
+      "pnl_usd": -42.71
+    },
+    {
+      "at": "2026-08-10T02:31:39.172138Z",
+      "deployed_usd": 14215.55,
+      "pnl_usd": -36.56
+    },
+    {
+      "at": "2026-08-10T06:26:47.796042Z",
+      "deployed_usd": 14215.55,
+      "pnl_usd": -29.92
+    },
+    {
+      "at": "2026-08-14T03:54:56.811640Z",
+      "deployed_usd": 0.0,
+      "pnl_usd": -43.59
+    },
+    {
+      "at": "2026-08-14T04:02:17.273114Z",
+      "deployed_usd": 0.0,
+      "pnl_usd": -43.59
+    },
+    {
+      "at": "2026-08-18T03:50:47.983772Z",
+      "deployed_usd": 0.0,
+      "pnl_usd": -43.59
+    },
+    {
+      "at": "2026-08-18T05:53:14.383671Z",
+      "deployed_usd": 0.0,
+      "pnl_usd": -43.59
+    },
+    {
+      "at": "2026-08-18T05:54:37.331048Z",
+      "deployed_usd": 0.0,
+      "pnl_usd": -43.59
+    }
+  ],
+  "portfolio_analytics": {
+    "annualized_snapshot_volatility_pct": 0.746704,
+    "average_deployed_capital_usd": 7463.15,
+    "capital_utilization_pct": 0.0,
+    "closed_losses": 8,
+    "closed_win_rate_pct": 0.0,
+    "closed_wins": 0,
+    "fees_usd": 23.96,
+    "funding_component_usd": 20.36,
+    "gross_exposure_usd": 0.0,
+    "mark_component_usd": -39.99,
+    "max_drawdown_pct": -0.12114,
+    "max_drawdown_usd": -60.57,
+    "nav_definition": "NAV=100×(1+累计模型盈亏/$50,000注册影子资本)；不使用动态在险资金作分母。",
+    "nav_index": 99.91282,
+    "nav_timeline": [
+      {
+        "at": "2026-08-06T06:12:57.996811Z",
+        "deployed_usd": 0.0,
+        "drawdown_pct": 0.0,
+        "nav_index": 100.0,
+        "pnl_usd": 0.0
+      },
+      {
+        "at": "2026-08-06T06:13:13.501203Z",
+        "deployed_usd": 4199.6,
+        "drawdown_pct": -0.00232,
+        "nav_index": 99.99768,
+        "pnl_usd": -1.16
+      },
+      {
+        "at": "2026-08-06T06:26:01.787124Z",
+        "deployed_usd": 4199.6,
+        "drawdown_pct": -0.00232,
+        "nav_index": 99.99768,
+        "pnl_usd": -1.16
+      },
+      {
+        "at": "2026-08-06T10:26:27.075705Z",
+        "deployed_usd": 6206.82,
+        "drawdown_pct": -0.00844,
+        "nav_index": 99.99156,
+        "pnl_usd": -4.22
+      },
+      {
+        "at": "2026-08-06T14:26:47.842214Z",
+        "deployed_usd": 9369.49,
+        "drawdown_pct": -0.01018,
+        "nav_index": 99.98982,
+        "pnl_usd": -5.09
+      },
+      {
+        "at": "2026-08-06T18:26:23.672404Z",
+        "deployed_usd": 9369.49,
+        "drawdown_pct": -0.0209,
+        "nav_index": 99.9791,
+        "pnl_usd": -10.45
+      },
+      {
+        "at": "2026-08-06T22:33:04.290613Z",
+        "deployed_usd": 4428.25,
+        "drawdown_pct": -0.02504,
+        "nav_index": 99.97496,
+        "pnl_usd": -12.52
+      },
+      {
+        "at": "2026-08-07T02:25:43.685450Z",
+        "deployed_usd": 4428.25,
+        "drawdown_pct": -0.03292,
+        "nav_index": 99.96708,
+        "pnl_usd": -16.46
+      },
+      {
+        "at": "2026-08-07T06:25:54.888726Z",
+        "deployed_usd": 7364.9,
+        "drawdown_pct": -0.03226,
+        "nav_index": 99.96774,
+        "pnl_usd": -16.13
+      },
+      {
+        "at": "2026-08-07T15:01:50.833315Z",
+        "deployed_usd": 7364.9,
+        "drawdown_pct": -0.04336,
+        "nav_index": 99.95664,
+        "pnl_usd": -21.68
+      },
+      {
+        "at": "2026-08-07T18:25:43.503631Z",
+        "deployed_usd": 7364.9,
+        "drawdown_pct": -0.044,
+        "nav_index": 99.956,
+        "pnl_usd": -22.0
+      },
+      {
+        "at": "2026-08-07T22:27:13.733385Z",
+        "deployed_usd": 7364.9,
+        "drawdown_pct": -0.03004,
+        "nav_index": 99.96996,
+        "pnl_usd": -15.02
+      },
+      {
+        "at": "2026-08-08T14:18:04.590935Z",
+        "deployed_usd": 7364.9,
+        "drawdown_pct": -0.0376,
+        "nav_index": 99.9624,
+        "pnl_usd": -18.8
+      },
+      {
+        "at": "2026-08-08T15:29:53.177717Z",
+        "deployed_usd": 7364.9,
+        "drawdown_pct": -0.0411,
+        "nav_index": 99.9589,
+        "pnl_usd": -20.55
+      },
+      {
+        "at": "2026-08-08T15:33:01.129395Z",
+        "deployed_usd": 7364.9,
+        "drawdown_pct": -0.0411,
+        "nav_index": 99.9589,
+        "pnl_usd": -20.55
+      },
+      {
+        "at": "2026-08-08T18:27:27.563639Z",
+        "deployed_usd": 7364.9,
+        "drawdown_pct": -0.04096,
+        "nav_index": 99.95904,
+        "pnl_usd": -20.48
+      },
+      {
+        "at": "2026-08-08T22:26:25.978537Z",
+        "deployed_usd": 7364.9,
+        "drawdown_pct": -0.0451,
+        "nav_index": 99.9549,
+        "pnl_usd": -22.55
+      },
+      {
+        "at": "2026-08-09T02:26:49.998813Z",
+        "deployed_usd": 7364.9,
+        "drawdown_pct": -0.03452,
+        "nav_index": 99.96548,
+        "pnl_usd": -17.26
+      },
+      {
+        "at": "2026-08-09T06:27:19.914862Z",
+        "deployed_usd": 9507.22,
+        "drawdown_pct": -0.04912,
+        "nav_index": 99.95088,
+        "pnl_usd": -24.56
+      },
+      {
+        "at": "2026-08-09T10:26:57.001832Z",
+        "deployed_usd": 11466.34,
+        "drawdown_pct": -0.11702,
+        "nav_index": 99.88298,
+        "pnl_usd": -58.51
+      },
+      {
+        "at": "2026-08-09T14:26:13.201151Z",
+        "deployed_usd": 14215.55,
+        "drawdown_pct": -0.12114,
+        "nav_index": 99.87886,
+        "pnl_usd": -60.57
+      },
+      {
+        "at": "2026-08-09T18:26:58.920884Z",
+        "deployed_usd": 14215.55,
+        "drawdown_pct": -0.09746,
+        "nav_index": 99.90254,
+        "pnl_usd": -48.73
+      },
+      {
+        "at": "2026-08-09T22:25:43.096969Z",
+        "deployed_usd": 14215.55,
+        "drawdown_pct": -0.08542,
+        "nav_index": 99.91458,
+        "pnl_usd": -42.71
+      },
+      {
+        "at": "2026-08-10T02:31:39.172138Z",
+        "deployed_usd": 14215.55,
+        "drawdown_pct": -0.07312,
+        "nav_index": 99.92688,
+        "pnl_usd": -36.56
+      },
+      {
+        "at": "2026-08-10T06:26:47.796042Z",
+        "deployed_usd": 14215.55,
+        "drawdown_pct": -0.05984,
+        "nav_index": 99.94016,
+        "pnl_usd": -29.92
+      },
+      {
+        "at": "2026-08-14T03:54:56.811640Z",
+        "deployed_usd": 0.0,
+        "drawdown_pct": -0.08718,
+        "nav_index": 99.91282,
+        "pnl_usd": -43.59
+      },
+      {
+        "at": "2026-08-14T04:02:17.273114Z",
+        "deployed_usd": 0.0,
+        "drawdown_pct": -0.08718,
+        "nav_index": 99.91282,
+        "pnl_usd": -43.59
+      },
+      {
+        "at": "2026-08-18T03:50:47.983772Z",
+        "deployed_usd": 0.0,
+        "drawdown_pct": -0.08718,
+        "nav_index": 99.91282,
+        "pnl_usd": -43.59
+      },
+      {
+        "at": "2026-08-18T05:53:14.383671Z",
+        "deployed_usd": 0.0,
+        "drawdown_pct": -0.08718,
+        "nav_index": 99.91282,
+        "pnl_usd": -43.59
+      },
+      {
+        "at": "2026-08-18T05:54:37.331048Z",
+        "deployed_usd": 0.0,
+        "drawdown_pct": -0.08718,
+        "nav_index": 99.91282,
+        "pnl_usd": -43.59
+      }
+    ],
+    "peak_deployed_capital_usd": 14215.55,
+    "realized_pnl_usd": -43.59,
+    "registered_capital_usd": 50000.0,
+    "reserve_usd": 0.0,
+    "return_on_average_deployed_pct": -0.5841,
+    "return_on_registered_capital_pct": -0.08718,
+    "unrealized_pnl_usd": 0.0,
+    "volatility_definition": "相邻快照盈亏变化/注册影子资本的样本波动率，按中位快照间隔年化；样本不足 8 个区间则不展示。",
+    "volatility_sample_count": 29
+  },
+  "positions": [],
+  "proposals": [
+    {
+      "color": "cobalt",
+      "current_candidate": {
+        "capacity_usd": 17106.51,
+        "consecutive_pretriggers": 3,
+        "direction": "short HL_XYZ / long BITGET",
+        "entry_basis_bp": -27.026117,
+        "history_days": 1,
+        "history_median_day_bp": 83.7,
+        "history_positive_days": 1,
+        "key": "KORU:HL_XYZ>BITGET",
+        "long_ask": 20.791,
+        "long_bid": 20.788,
+        "long_capacity_source": "l1_book",
+        "long_funding_day_bp": -82.2,
+        "long_funding_interval_h": 8.0,
+        "long_symbol": "KORUUSDT",
+        "long_venue": "BITGET",
+        "pair_id": "KORU:BITGET|HL_XYZ",
+        "pretrigger": true,
+        "projected_net_72h_bp": 190.273883,
+        "quality": "complete",
+        "rank": 4,
+        "roundtrip_taker_bp": 13.8,
+        "score": 190.273883,
+        "short_ask": 20.75935,
+        "short_bid": 20.73481,
+        "short_capacity_source": "derived_oi_volume",
+        "short_funding_day_bp": 1.5,
+        "short_funding_interval_h": 1.0,
+        "short_symbol": "xyz:KORU",
+        "short_venue": "HL_XYZ",
+        "sizing": {
+          "binding_constraint": "single-leg cap",
+          "committed_capital_usd": 10000.0,
+          "eligible": true,
+          "expected_72h_pnl_usd": 76.11,
+          "notional_per_leg_usd": 4000.0,
+          "paired_capacity_usd": 17106.51,
+          "participation_rate": 0.5,
+          "reserve_usd": 2000.0
+        },
+        "spread_day_bp": 83.7,
+        "status": "CONTINUE_OBSERVATION",
+        "track": "T1_EQUITY_FUNDING",
+        "underlying": "KORU"
+      },
+      "forward": {
+        "capital_turnover_usd": 26840.58,
+        "closed_trades": 5,
+        "closed_win_rate_pct": 0.0,
+        "closed_wins": 0,
+        "current_capital_usd": 0.0,
+        "fees_usd": 14.38,
+        "funding_component_usd": 13.83,
+        "mark_component_usd": -38.4,
+        "modeled_pnl_usd": -38.95,
+        "open_trades": 0,
+        "pnl_on_capital_turnover_pct": -0.1451
+      },
+      "history": {
+        "best_replay": {
+          "at": "2026-08-18T05:53:14.383671Z",
+          "capacity_usd": 7695.46,
+          "direction": "short BINANCE / long HL_XYZ",
+          "projected_net_72h_bp": 644.828532,
+          "sizing": {
+            "binding_constraint": "visible paired capacity",
+            "committed_capital_usd": 9619.33,
+            "eligible": true,
+            "expected_72h_pnl_usd": 248.11,
+            "notional_per_leg_usd": 3847.73,
+            "paired_capacity_usd": 7695.46,
+            "participation_rate": 0.5,
+            "reserve_usd": 1923.87
+          },
+          "underlying": "CXMT"
+        },
+        "covered_snapshots": 42,
+        "evidence_label": "HISTORICAL_REPLAY_NOT_SCORE",
+        "execution_review_count": 0,
+        "median_pretrigger_net_72h_bp": 49.484466,
+        "observation_rows": 420,
+        "pretrigger_count": 75
+      },
+      "id": "T1_EQUITY_FUNDING",
+      "kill": "费差不能覆盖双边手续费、负入场基差与 20bp 退出储备，或配对容量低于 $1,500。",
+      "mechanism": "收益来自两场资金费率残差；价格方向近似中性，但基差、停盘时段和跨场保证金并不中性。",
+      "number": "I",
+      "open_position": null,
+      "risk_logic": "两场的预言机、交易时段和停牌规则并不相同。资金费收益可能被跨场基差扩大、单腿跳价、保证金分裂、清算和场馆信用风险一次性吞掉。",
+      "risk_profile": {
+        "current_committed_capital_usd": 0.0,
+        "disclaimer": "这是模拟资本与名义敞口上限，不是损失保证上限；跳空、清算、场馆或结算失败可令真实损失超出日常波动估计。",
+        "is_loss_cap": false,
+        "max_committed_capital_usd": 10000.0,
+        "max_gross_notional_usd": 8000.0,
+        "max_reserve_usd": 2000.0
+      },
+      "short": "跨场美股永续",
+      "status": "READY_TO_SIMULATE",
+      "theory_basis": "同一股票底层由相近的现货或预言机价格锚定；当不同场馆的资金费制度和持仓结构不同，费率会短暂分层，而价格偏离理论上受到共同底层约束。",
+      "thesis": "同一股票底层在 Binance、Bitget 与 Hyperliquid xyz 的资金费制度不同，做空高费率腿、做多低费率腿。",
+      "title": "跨场美股永续资金费率差",
+      "track_quality": "complete"
+    },
+    {
+      "color": "emerald",
+      "current_candidate": {
+        "blocker": null,
+        "capacity_usd": 4.53,
+        "consecutive_pretriggers": 0,
+        "direction": "short BINANCE perp / long BINANCE bStock",
+        "entry_basis_bp": -8.386299,
+        "funding_settlement_bp": 2.4692,
+        "history_days": 1,
+        "history_median_day_bp": 7.4505,
+        "history_positive_days": 1,
+        "key": "BE:BN_PERP>BN_BSTOCK",
+        "long_ask": 226.56,
+        "long_bid": 226.46,
+        "long_symbol": "BEBUSDT",
+        "long_venue": "BINANCE_BSTOCK",
+        "pair_id": "BE:BINANCE_BSTOCK|BINANCE_PERP",
+        "pretrigger": false,
+        "projected_net_72h_bp": -36.163499,
+        "quality": "complete",
+        "rank": 1,
+        "roundtrip_taker_bp": 30.0,
+        "score": -36.163499,
+        "short_ask": 226.43,
+        "short_bid": 226.37,
+        "short_symbol": "BEUSDT",
+        "short_venue": "BINANCE_PERP",
+        "sizing": {
+          "binding_constraint": "visible paired capacity",
+          "committed_capital_usd": 5.66,
+          "eligible": false,
+          "expected_72h_pnl_usd": -0.01,
+          "notional_per_leg_usd": 2.27,
+          "paired_capacity_usd": 4.53,
+          "participation_rate": 0.5,
+          "reserve_usd": 1.13
+        },
+        "spread_day_bp": 7.4076,
+        "status": "NO_TRIGGER",
+        "track": "T2_BN_BSTOCK_SPOT_PERP",
+        "underlying": "BE"
+      },
+      "forward": {
+        "capital_turnover_usd": 0.0,
+        "closed_trades": 0,
+        "closed_win_rate_pct": null,
+        "closed_wins": 0,
+        "current_capital_usd": 0.0,
+        "fees_usd": 0.0,
+        "funding_component_usd": 0.0,
+        "mark_component_usd": 0.0,
+        "modeled_pnl_usd": 0.0,
+        "open_trades": 0,
+        "pnl_on_capital_turnover_pct": null
+      },
+      "history": {
+        "best_replay": {
+          "at": "2026-08-06T02:47:17.906715Z",
+          "capacity_usd": 9260.62,
+          "direction": "short BINANCE perp / long BINANCE bStock",
+          "projected_net_72h_bp": 83.833411,
+          "sizing": {
+            "binding_constraint": "single-leg cap",
+            "committed_capital_usd": 10000.0,
+            "eligible": true,
+            "expected_72h_pnl_usd": 33.53,
+            "notional_per_leg_usd": 4000.0,
+            "paired_capacity_usd": 9260.62,
+            "participation_rate": 0.5,
+            "reserve_usd": 2000.0
+          },
+          "underlying": "SNXX"
+        },
+        "covered_snapshots": 40,
+        "evidence_label": "HISTORICAL_REPLAY_NOT_SCORE",
+        "execution_review_count": 0,
+        "median_pretrigger_net_72h_bp": 83.833411,
+        "observation_rows": 400,
+        "pretrigger_count": 1
+      },
+      "id": "T2_BN_BSTOCK_SPOT_PERP",
+      "kill": "单次正资金费不足 5bp、容量不足，或 72h 费后净值不为正。",
+      "mechanism": "同场执行最简单；只模拟正资金费方向，负资金费要求做空 bStock，借券未证明前关闭。",
+      "number": "II",
+      "open_position": null,
+      "risk_logic": "bStock 的申赎、转让和定价权不等同真实股票；股票闭市时基差可能扩大，永续腿仍可能被清算。规则调整、现货流动性不足和映射失效是主要尾部风险。",
+      "risk_profile": {
+        "current_committed_capital_usd": 0.0,
+        "disclaimer": "这是模拟资本与名义敞口上限，不是损失保证上限；跳空、清算、场馆或结算失败可令真实损失超出日常波动估计。",
+        "is_loss_cap": false,
+        "max_committed_capital_usd": 10000.0,
+        "max_gross_notional_usd": 8000.0,
+        "max_reserve_usd": 2000.0
+      },
+      "short": "BN bStock Carry",
+      "status": "NO_TRIGGER",
+      "theory_basis": "bStock 现货和对应股票永续指向同一股票价值；在永续多头拥挤并支付正资金费时，买现货、空永续可以用同底层对冲价格方向。",
+      "thesis": "买入 bStock 现货并做空同底层股票永续，在正资金费窗口收取资金费。",
+      "title": "Binance bStock 现货 × 股票永续",
+      "track_quality": "complete"
+    },
+    {
+      "color": "amber",
+      "current_candidate": {
+        "capacity_usd": 5.03,
+        "consecutive_pretriggers": 0,
+        "direction": "short BITGET / long BINANCE",
+        "entry_basis_bp": -0.663526,
+        "history_days": 1,
+        "history_median_day_bp": 36.6444,
+        "history_positive_days": 1,
+        "key": "ACE:BITGET>BINANCE",
+        "long_ask": 0.15071,
+        "long_bid": 0.1507,
+        "long_capacity_source": "l1_book",
+        "long_funding_day_bp": -353.2734,
+        "long_funding_interval_h": 4.0,
+        "long_symbol": "ACEUSDT",
+        "long_venue": "BINANCE",
+        "pair_id": "ACE:BINANCE|BITGET",
+        "pretrigger": false,
+        "projected_net_72h_bp": 67.836674,
+        "quality": "complete",
+        "rank": 1,
+        "roundtrip_taker_bp": 22.0,
+        "score": 67.836674,
+        "short_ask": 0.1508,
+        "short_bid": 0.1507,
+        "short_capacity_source": "l1_book",
+        "short_funding_day_bp": -316.44,
+        "short_funding_interval_h": 4.0,
+        "short_symbol": "ACEUSDT",
+        "short_venue": "BITGET",
+        "sizing": {
+          "binding_constraint": "visible paired capacity",
+          "committed_capital_usd": 6.29,
+          "eligible": false,
+          "expected_72h_pnl_usd": 0.02,
+          "notional_per_leg_usd": 2.52,
+          "paired_capacity_usd": 5.03,
+          "participation_rate": 0.5,
+          "reserve_usd": 1.26
+        },
+        "spread_day_bp": 36.8334,
+        "status": "NO_TRIGGER",
+        "track": "T3_CEX_CEX_CRYPTO_FUNDING",
+        "underlying": "ACE"
+      },
+      "forward": {
+        "capital_turnover_usd": 2749.21,
+        "closed_trades": 1,
+        "closed_win_rate_pct": 0.0,
+        "closed_wins": 0,
+        "current_capital_usd": 0.0,
+        "fees_usd": 2.42,
+        "funding_component_usd": 2.21,
+        "mark_component_usd": -0.51,
+        "modeled_pnl_usd": -0.72,
+        "open_trades": 0,
+        "pnl_on_capital_turnover_pct": -0.0262
+      },
+      "history": {
+        "best_replay": {
+          "at": "2026-08-09T14:26:13.201151Z",
+          "capacity_usd": 2199.37,
+          "direction": "short BITGET / long BINANCE",
+          "projected_net_72h_bp": 57.5094,
+          "sizing": {
+            "binding_constraint": "visible paired capacity",
+            "committed_capital_usd": 2749.21,
+            "eligible": true,
+            "expected_72h_pnl_usd": 6.32,
+            "notional_per_leg_usd": 1099.68,
+            "paired_capacity_usd": 2199.37,
+            "participation_rate": 0.5,
+            "reserve_usd": 549.84
+          },
+          "underlying": "DEXE"
+        },
+        "covered_snapshots": 24,
+        "evidence_label": "HISTORICAL_REPLAY_NOT_SCORE",
+        "execution_review_count": 0,
+        "median_pretrigger_net_72h_bp": 57.5094,
+        "observation_rows": 240,
+        "pretrigger_count": 1
+      },
+      "id": "T3_CEX_CEX_CRYPTO_FUNDING",
+      "kill": "Bitget 合约集合或资金费周期不完整时，整条赛道不评分。",
+      "mechanism": "执行深度通常优于股票映射品，但需要精确处理不同结算周期、手续费与跨所抵押品。",
+      "number": "III",
+      "open_position": null,
+      "risk_logic": "抵押品分散在两个交易所，无法瞬时互相补充。提现冻结、自动减仓、资金费周期错位、单所插针和交易所信用事件都会破坏双腿同步性。",
+      "risk_profile": {
+        "current_committed_capital_usd": 0.0,
+        "disclaimer": "这是模拟资本与名义敞口上限，不是损失保证上限；跳空、清算、场馆或结算失败可令真实损失超出日常波动估计。",
+        "is_loss_cap": false,
+        "max_committed_capital_usd": 10000.0,
+        "max_gross_notional_usd": 8000.0,
+        "max_reserve_usd": 2000.0
+      },
+      "short": "CEX × CEX",
+      "status": "NO_TRIGGER",
+      "theory_basis": "成熟 CEX 的同名加密永续通常共享相近指数价格；资金费差反映各场馆独立的仓位失衡，跨场对冲可在价格方向近似中性的情况下收取差额。",
+      "thesis": "在两个成熟 CEX 的共同合约中对冲方向风险，收取资金费差。",
+      "title": "Binance × Bitget 加密永续资金费率差",
+      "track_quality": "complete"
+    },
+    {
+      "color": "violet",
+      "current_candidate": {
+        "capacity_usd": 5.03,
+        "consecutive_pretriggers": 0,
+        "direction": "short HL / long BINANCE",
+        "entry_basis_bp": -0.663526,
+        "history_days": 1,
+        "history_median_day_bp": 30.521592,
+        "history_positive_days": 1,
+        "key": "ACE:HL>BINANCE",
+        "long_ask": 0.15071,
+        "long_bid": 0.1507,
+        "long_capacity_source": "l1_book",
+        "long_funding_day_bp": -353.2734,
+        "long_funding_interval_h": 4.0,
+        "long_symbol": "ACEUSDT",
+        "long_venue": "BINANCE",
+        "pair_id": "ACE:BINANCE|HL",
+        "pretrigger": false,
+        "projected_net_72h_bp": 47.800418,
+        "quality": "complete",
+        "rank": 1,
+        "roundtrip_taker_bp": 28.0,
+        "score": 47.800418,
+        "short_ask": 0.151,
+        "short_bid": 0.1507,
+        "short_capacity_source": "derived_oi_volume",
+        "short_funding_day_bp": -321.118752,
+        "short_funding_interval_h": 1.0,
+        "short_symbol": "ACE",
+        "short_venue": "HL",
+        "sizing": {
+          "binding_constraint": "visible paired capacity",
+          "committed_capital_usd": 6.29,
+          "eligible": false,
+          "expected_72h_pnl_usd": 0.01,
+          "notional_per_leg_usd": 2.52,
+          "paired_capacity_usd": 5.03,
+          "participation_rate": 0.5,
+          "reserve_usd": 1.26
+        },
+        "spread_day_bp": 32.154648,
+        "status": "NO_TRIGGER",
+        "track": "T4_CEX_DEX_CRYPTO_FUNDING",
+        "underlying": "ACE"
+      },
+      "forward": {
+        "capital_turnover_usd": 5973.56,
+        "closed_trades": 2,
+        "closed_win_rate_pct": 0.0,
+        "closed_wins": 0,
+        "current_capital_usd": 0.0,
+        "fees_usd": 7.16,
+        "funding_component_usd": 4.33,
+        "mark_component_usd": -1.08,
+        "modeled_pnl_usd": -3.92,
+        "open_trades": 0,
+        "pnl_on_capital_turnover_pct": -0.0656
+      },
+      "history": {
+        "best_replay": {
+          "at": "2026-08-07T18:25:43.503631Z",
+          "capacity_usd": 3013.54,
+          "direction": "short BITGET / long HL",
+          "projected_net_72h_bp": 126.589101,
+          "sizing": {
+            "binding_constraint": "visible paired capacity",
+            "committed_capital_usd": 3766.93,
+            "eligible": true,
+            "expected_72h_pnl_usd": 19.07,
+            "notional_per_leg_usd": 1506.77,
+            "paired_capacity_usd": 3013.54,
+            "participation_rate": 0.5,
+            "reserve_usd": 753.38
+          },
+          "underlying": "NOT"
+        },
+        "covered_snapshots": 42,
+        "evidence_label": "HISTORICAL_REPLAY_NOT_SCORE",
+        "execution_review_count": 0,
+        "median_pretrigger_net_72h_bp": 14.856383,
+        "observation_rows": 420,
+        "pretrigger_count": 25
+      },
+      "id": "T4_CEX_DEX_CRYPTO_FUNDING",
+      "kill": "配对容量、数据完整性或 72h 费后净收益任一不过关。",
+      "mechanism": "费差空间更大，但承担跨抵押品、预言机、链上与交易所托管风险。",
+      "number": "IV",
+      "open_position": null,
+      "risk_logic": "链上预言机、排序和清算机制与 CEX 不同，双腿之间还存在充值提现和抵押品隔离。极端行情中基差、ADL、链上拥堵或场馆故障可能同时发生。",
+      "risk_profile": {
+        "current_committed_capital_usd": 0.0,
+        "disclaimer": "这是模拟资本与名义敞口上限，不是损失保证上限；跳空、清算、场馆或结算失败可令真实损失超出日常波动估计。",
+        "is_loss_cap": false,
+        "max_committed_capital_usd": 10000.0,
+        "max_gross_notional_usd": 8000.0,
+        "max_reserve_usd": 2000.0
+      },
+      "short": "CEX × DEX",
+      "status": "NO_TRIGGER",
+      "theory_basis": "CEX 与 Hyperliquid 的同一加密底层受到共同现货指数约束，但资金费公式、参与者结构和抵押品体系不同，因此可能形成可持续数个结算周期的残差。",
+      "thesis": "利用中心化交易所与链上永续不同的资金费制度捕获残差。",
+      "title": "CEX × Hyperliquid 加密永续资金费率差",
+      "track_quality": "complete"
+    },
+    {
+      "color": "slate",
+      "current_candidate": {
+        "capacity_usd": 1200.0,
+        "consecutive_pretriggers": 0,
+        "days_to_expiry": 129.0869,
+        "direction": "short BINANCE COIN-M delivery / long BINANCE spot",
+        "gross_basis_bp": 155.481493,
+        "history_days": 0,
+        "history_median_day_bp": null,
+        "history_positive_days": 0,
+        "key": "BTCUSD_261225:short_delivery_long_spot",
+        "long_ask": 64227.58,
+        "long_bid": 64227.57,
+        "long_symbol": "BTCUSDT",
+        "long_venue": "BINANCE_SPOT",
+        "net_annualized_pct": 2.982544,
+        "pair_id": "BTCUSD_261225:BINANCE_COINM|BINANCE_SPOT",
+        "pretrigger": false,
+        "quality": "complete",
+        "rank": 1,
+        "score": 2.982544,
+        "short_ask": 65226.3,
+        "short_bid": 65226.2,
+        "short_symbol": "BTCUSD_261225",
+        "short_venue": "BINANCE_COINM",
+        "sizing": {
+          "binding_constraint": "visible paired capacity",
+          "committed_capital_usd": 1500.0,
+          "eligible": true,
+          "expected_72h_pnl_usd": 0.0,
+          "notional_per_leg_usd": 600.0,
+          "paired_capacity_usd": 1200.0,
+          "participation_rate": 0.5,
+          "reserve_usd": 300.0
+        },
+        "status": "NO_TRIGGER",
+        "track": "T5_BN_DATED_CARRY",
+        "underlying": "BTC"
+      },
+      "forward": {
+        "capital_turnover_usd": 0.0,
+        "closed_trades": 0,
+        "closed_win_rate_pct": null,
+        "closed_wins": 0,
+        "current_capital_usd": 0.0,
+        "fees_usd": 0.0,
+        "funding_component_usd": 0.0,
+        "mark_component_usd": 0.0,
+        "modeled_pnl_usd": 0.0,
+        "open_trades": 0,
+        "pnl_on_capital_turnover_pct": null
+      },
+      "history": {
+        "best_replay": null,
+        "covered_snapshots": 4,
+        "evidence_label": "HISTORICAL_REPLAY_NOT_SCORE",
+        "execution_review_count": 0,
+        "median_pretrigger_net_72h_bp": null,
+        "observation_rows": 40,
+        "pretrigger_count": 0
+      },
+      "id": "T5_BN_DATED_CARRY",
+      "kill": "14–180 天、$3,000 容量或扣 50bp 后 8% 净年化任一不满足。",
+      "mechanism": "不依赖资金费持续，但收益受剩余期限、反向合约结构和资金效率限制。",
+      "number": "V",
+      "open_position": null,
+      "risk_logic": "到期收敛不代表持有过程安全。反向合约凸性、保证金币种下跌、到期前基差扩大、清算以及交割指数或规则变化都可能导致无法持有至收敛。",
+      "risk_profile": {
+        "current_committed_capital_usd": 0.0,
+        "disclaimer": "这是模拟资本与名义敞口上限，不是损失保证上限；跳空、清算、场馆或结算失败可令真实损失超出日常波动估计。",
+        "is_loss_cap": false,
+        "max_committed_capital_usd": 10000.0,
+        "max_gross_notional_usd": 8000.0,
+        "max_reserve_usd": 2000.0
+      },
+      "short": "到期 Carry",
+      "status": "NO_TRIGGER",
+      "theory_basis": "有明确到期和结算规则的期货价格应在到期时向结算指数收敛；买入现货并做空升水合约，可以把初始升水锁定为期限收益。",
+      "thesis": "买入现货、做空升水交割合约，依靠明确到期日收敛。",
+      "title": "Binance COIN-M 到期交割合约 Carry",
+      "track_quality": "complete"
+    }
+  ],
+  "schema_version": 1,
+  "simulation_policy": {
+    "data_gap": "报价缺失时不计资金费、不猜价格、不强制退出。",
+    "entry": "首个公开数据 pretrigger 即进入模拟，不等同真钱批准；每条机制同时只开一个子交易。",
+    "exit": "持有 72h，或原方向资金费差连续两次不再为正。",
+    "fill": "按同步盘口可执行价和 taker 费模拟，不假设 maker 成交。",
+    "funding": "当前版本按连续快照积分估算资金费；未与真实结算记录对账前标记 MODELED。"
+  },
+  "sources": {
+    "history_of_market_reference": "https://historyofmarket.com/",
+    "latest_snapshot": "/Users/wucyrus/ml-arbi-runtime/data/snapshots/snapshot-20260818T055437Z.json",
+    "monitor": "TOP5市场套利持续监控-Codex-2026-08-03"
+  },
+  "summary": {
+    "closed_position_count": 8,
+    "data_quality": "PARTIAL",
+    "deployed_capital_usd": 0.0,
+    "modeled_pnl_usd": -43.59,
+    "open_position_count": 0,
+    "proposal_count": 5
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "generated_at_utc": "2026-08-18T05:54:49.638832Z",
+  "nav_definition": "组合累计盈亏 = 五条策略累计盈亏之和;每策略固定注册 $10,000(PLAN §2 附件 §5 口径)",
+  "nav_index": 99.91282,
+  "portfolio_cumulative_pnl_usd": -43.59,
+  "registered_capital_usd": 50000.0,
+  "schema_version": 1,
+  "stored_timeline_final_pnl_usd": -43.59,
+  "strategy_cumulative_pnl_usd": {
+    "T1_EQUITY_FUNDING": -38.95,
+    "T2_BN_BSTOCK_SPOT_PERP": 0.0,
+    "T3_CEX_CEX_CRYPTO_FUNDING": -0.72,
+    "T4_CEX_DEX_CRYPTO_FUNDING": -3.92,
+    "T5_BN_DATED_CARRY": 0.0
+  },
+  "sum_check": "PASSED"
+}

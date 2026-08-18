@@ -1,0 +1,133 @@
+{
+  "generated_at_utc": "2026-08-18T05:54:49.700634Z",
+  "portfolio": {
+    "forward_started_at_utc": "2026-08-06T06:12:57.996811Z",
+    "life_or_death_review_due_utc": "2026-10-01T06:12:57.996811Z",
+    "promotion_candidates": []
+  },
+  "rules": "判决窗=min(20笔平仓,42天)先到为准;晋升=净PnL>0 且 funding归因>0 且 最大回撤≥-2%;不达即RETIRED(复活须新证据);判决窗内不得修改任何阈值;组合级:前向启动56天后若0/5晋升,召开正式生死会。",
+  "rules_frozen": true,
+  "schema_version": 1,
+  "strategies": {
+    "T1_EQUITY_FUNDING": {
+      "checks": {
+        "drawdown_within_budget": true,
+        "funding_attribution_positive": true,
+        "net_pnl_positive": false
+      },
+      "note": "COLLECTOR_PAUSED:采集暂停期间判决窗时钟按数据末点冻结,不按墙钟走",
+      "observed": {
+        "closed_win_rate_pct": 0.0,
+        "cumulative_net_pnl_usd": -38.95,
+        "funding_pnl_usd": 13.83,
+        "max_drawdown_pct": -0.5587
+      },
+      "strategy_id": "T1_EQUITY_FUNDING",
+      "verdict": "IN_WINDOW",
+      "window": {
+        "closed_trades": 5,
+        "days_remaining": 30.01,
+        "days_required": 42,
+        "elapsed_days": 11.99,
+        "trades_remaining": 15,
+        "trades_required": 20
+      }
+    },
+    "T2_BN_BSTOCK_SPOT_PERP": {
+      "checks": {
+        "drawdown_within_budget": true,
+        "funding_attribution_positive": false,
+        "net_pnl_positive": false
+      },
+      "note": "COLLECTOR_PAUSED:采集暂停期间判决窗时钟按数据末点冻结,不按墙钟走",
+      "observed": {
+        "closed_win_rate_pct": null,
+        "cumulative_net_pnl_usd": 0.0,
+        "funding_pnl_usd": 0.0,
+        "max_drawdown_pct": 0.0
+      },
+      "strategy_id": "T2_BN_BSTOCK_SPOT_PERP",
+      "verdict": "IN_WINDOW",
+      "window": {
+        "closed_trades": 0,
+        "days_remaining": 30.01,
+        "days_required": 42,
+        "elapsed_days": 11.99,
+        "trades_remaining": 20,
+        "trades_required": 20
+      }
+    },
+    "T3_CEX_CEX_CRYPTO_FUNDING": {
+      "checks": {
+        "drawdown_within_budget": true,
+        "funding_attribution_positive": true,
+        "net_pnl_positive": false
+      },
+      "note": "COLLECTOR_PAUSED:采集暂停期间判决窗时钟按数据末点冻结,不按墙钟走",
+      "observed": {
+        "closed_win_rate_pct": 0.0,
+        "cumulative_net_pnl_usd": -0.72,
+        "funding_pnl_usd": 2.21,
+        "max_drawdown_pct": -0.0212
+      },
+      "strategy_id": "T3_CEX_CEX_CRYPTO_FUNDING",
+      "verdict": "IN_WINDOW",
+      "window": {
+        "closed_trades": 1,
+        "days_remaining": 30.01,
+        "days_required": 42,
+        "elapsed_days": 11.99,
+        "trades_remaining": 19,
+        "trades_required": 20
+      }
+    },
+    "T4_CEX_DEX_CRYPTO_FUNDING": {
+      "checks": {
+        "drawdown_within_budget": true,
+        "funding_attribution_positive": true,
+        "net_pnl_positive": false
+      },
+      "note": "COLLECTOR_PAUSED:采集暂停期间判决窗时钟按数据末点冻结,不按墙钟走",
+      "observed": {
+        "closed_win_rate_pct": 0.0,
+        "cumulative_net_pnl_usd": -3.92,
+        "funding_pnl_usd": 4.33,
+        "max_drawdown_pct": -0.054097
+      },
+      "strategy_id": "T4_CEX_DEX_CRYPTO_FUNDING",
+      "verdict": "IN_WINDOW",
+      "window": {
+        "closed_trades": 2,
+        "days_remaining": 30.01,
+        "days_required": 42,
+        "elapsed_days": 11.99,
+        "trades_remaining": 18,
+        "trades_required": 20
+      }
+    },
+    "T5_BN_DATED_CARRY": {
+      "checks": {
+        "drawdown_within_budget": true,
+        "funding_attribution_positive": false,
+        "net_pnl_positive": false
+      },
+      "note": "COLLECTOR_PAUSED:采集暂停期间判决窗时钟按数据末点冻结,不按墙钟走",
+      "observed": {
+        "closed_win_rate_pct": null,
+        "cumulative_net_pnl_usd": 0.0,
+        "funding_pnl_usd": 0.0,
+        "max_drawdown_pct": 0.0
+      },
+      "strategy_id": "T5_BN_DATED_CARRY",
+      "verdict": "IN_WINDOW",
+      "window": {
+        "closed_trades": 0,
+        "days_remaining": 30.01,
+        "days_required": 42,
+        "elapsed_days": 11.99,
+        "trades_remaining": 20,
+        "trades_required": 20
+      }
+    }
+  }
+}

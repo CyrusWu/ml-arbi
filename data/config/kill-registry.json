@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "updated_at_utc": "2026-08-10T00:00:00Z",
+  "governance": "已杀 claim 无新证据不得复活(PLAN §6)。BLOCK_OPEN 条目由 signal_gates 在开仓路径结构性拒绝;ADVISORY 条目只注记不拦截。复活=Cyrus commit 修改本文件并附新证据。",
+  "entries": [
+    {
+      "id": "KILL-C6-T2-FROZEN",
+      "effect": "BLOCK_OPEN",
+      "scope": { "track": "T2_BN_BSTOCK_SPOT_PERP" },
+      "cause": "C6 补审终审:bStock 借券全档 borrowLimit=0(负费方向物理关闭);正费方向基差对敲亦被三重证伪(同价印两遍/点差>基差/基差符号与carry反相关);资金费死区 sign×max(0,|溢价|-5bp) 使 73-76% 结算精确为零。",
+      "evidence": "30-投资/30-04-crypto-dd/C6币安所内三角-补审终审-2026-07-21.md",
+      "revival_evidence": "币安开放 bStock 借券(borrowLimit>0 的一手 API 证据),或推翻 C6 基差死因的新一手数据。观察与信号统计不受限,仅禁开仓。"
+    },
+    {
+      "id": "KILL-S007-BITGET-RTOKEN",
+      "effect": "BLOCK_OPEN",
+      "scope": { "venue_any": ["BITGET_RTOKEN_SPOT"] },
+      "cause": "S007 Phase 0 kill(Codex H0 96%):rToken ticker≠CLOB 撮合层镜像;Bitget 股票永续 mark 用外部源,无同所收敛力。",
+      "evidence": "30-投资/30-04-crypto-dd/C9验证结果-Codex-2026-07-21.md",
+      "revival_evidence": "Bitget 公布 rToken 统一口径且 fills/ticker 对账通过。"
+    },
+    {
+      "id": "KILL-C10-PRICE-ARB",
+      "effect": "ADVISORY",
+      "scope": { "mechanism": "同标的跨所现货价格搬砖" },
+      "cause": "同 mint 跨所 4bp < 费率地板;价格腿全域被 MM 压平(链上与 CEX 同判)。",
+      "evidence": "30-投资/30-04-crypto-dd/CEX美股套利-四场馆矩阵与费率腿终审-2026-07-21.md"
+    },
+    {
+      "id": "KILL-S5-WEEKEND-CARRY",
+      "effect": "ADVISORY",
+      "scope": { "mechanism": "周末闭市错位/周末carry" },
+      "cause": "周末 carry 更薄非更肥:82.6% 周末结算为零 vs 工作日 47.3%;一次往返吃掉 3-5 个周末。",
+      "evidence": "30-投资/30-04-crypto-dd/C6币安所内三角-补审终审-2026-07-21.md"
+    },
+    {
+      "id": "KILL-B1B2-EVENT-WINDOW",
+      "effect": "ADVISORY",
+      "scope": { "mechanism": "新上市事件窗($100探针)" },
+      "cause": "B1 港股=CAPACITY_KILL(±10bp 深度 $220-814);B2 CXMT=HEDGE_ACCESS_KILL;三振停在 2/3,哨兵栈被 TOP5 体制性替代。",
+      "evidence": "30-投资/30-04-crypto-dd/MoneyLead美股费率线-Codex裁决与执行回流-2026-07-23.md",
+      "revival_evidence": "出现同时过频率×幅度×双腿容量三关的实测事件。"
+    }
+  ]
+}

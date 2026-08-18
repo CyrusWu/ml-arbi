@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "note": "DeepSeek 只做人话翻译;事实字段为确定性数据;不含建议",
+  "briefs": [
+    {
+      "generated_at_utc": "2026-08-18T05:54:55.919556+00:00",
+      "snapshot": "2026-08-18T05:54:37.331048Z",
+      "text": "本轮共出现5个候选套利信号，但最终没有开仓；其中KORU信号被引擎的五重过滤规则拦下，原因是未通过“已实现基差”这一关（基差指现货与合约的价差，已实现基差是实际发生的价差收益）。其余候选信号如BE、ACE、BTC等虽被列入，但本轮均未触发开仓，具体未通过原因未在记录中给出。当前投资组合浮动盈亏为负43.59美元。另说明，候选信号中提到的“日费差”大致指每日资金费率的差异，即多空双方为持仓互相支付的占位费用之差；与KORU相关的信号容量约1.7万美元，但历史数据仅1天，信号成熟度较低。",
+      "source": "deepseek-v4-flash",
+      "facts": {
+        "opened": [],
+        "closed": [],
+        "rejections": [
+          "KORU 信号五关拒绝:v0 规则会选中该候选;v1 未过:G1_realized_basis。阈值与逐关判定见 signal-gates-config.json。"
+        ],
+        "open_positions": [],
+        "portfolio_pnl": -43.59
+      }
+    },
+    {
+      "generated_at_utc": "2026-08-18T03:51:11.666492+00:00",
+      "snapshot": "2026-08-18T03:50:47.983772Z",
+      "text": "本轮处理快照 2026-08-18T03:50:47.983772Z,5 个候选进入观察。 五关拦下:KORU 信号五关拒绝:v0 规则会选中该候选;v1 未过:G1_realized_basis、G3_persistence。阈值与逐关判定见 signal-gates-config.json。。",
+      "source": "template",
+      "facts": {
+        "opened": [],
+        "closed": [],
+        "rejections": [
+          "KORU 信号五关拒绝:v0 规则会选中该候选;v1 未过:G1_realized_basis、G3_persistence。阈值与逐关判定见 signal-gates-config.json。"
+        ],
+        "open_positions": [],
+        "portfolio_pnl": -43.59
+      }
+    },
+    {
+      "generated_at_utc": "2026-08-18T03:33:07.732268+00:00",
+      "snapshot": "2026-08-14T04:02:17.273114Z",
+      "text": "过去约4小时引擎盯了5个候选标的（BOT、AMAT、ONE、MOVE、BTC），但最终一笔开仓都没有成交，也没有平仓动作。其中BOT被“信号五关”（平台筛选信号的多道检查流程）拦下，原因是未通过持续性关卡——它此前4天有连续2张信号记录，但未达到当前规则要求的延续标准；其余四个候选中，AMAT、ONE、MOVE和BTC虽然列在候选里，但引擎没有给出它们被拒的具体原因，同样没有进入开仓。另外，当前持仓组合的盈亏显示为负43.59美元（即账面浮亏43.59美元）。本轮整体看，机会虽多，实际通过全部关卡并开仓的为零。",
+      "source": "deepseek-v4-flash",
+      "facts": {
+        "opened": [],
+        "closed": [],
+        "rejections": [
+          "BOT 信号五关拒绝:v0 规则会选中该候选;v1 未过:G3_persistence。阈值与逐关判定见 signal-gates-config.json。"
+        ],
+        "open_positions": [],
+        "portfolio_pnl": -43.59
+      }
+    }
+  ]
+}
